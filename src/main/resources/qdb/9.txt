@@ -1,0 +1,1 @@
+<p>已知实数<span class="ql-formula">$x$</span>满足<span class="ql-formula">$3^{2x-4} - \frac{10}{3} · 3^(x-1) + 9 \le 0$</span> 且<span class="ql-formula">$f(x) = log_2 \frac{x}{2} · log_{\sqrt{2}} \frac{\sqrt{2}}{2} $</span> </p><p>(1)求实数<span class="ql-formula">$x$</span> 的取值范围.</p><p>(2)求<span class="ql-formula">$f(x)$</span>的最大值和最小值，并求此时<span class="ql-formula">$x$</span>的值.</p>

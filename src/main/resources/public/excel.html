@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Excel报表导出 - Office工具</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/lib/vue.global.prod.js"></script>
+  <script type="text/javascript" src="js/base.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h3 class="text-center">
+      Excel报表导出
+    </h3>
+    <form method="post" action="/gen/excel/table">
+      <div class="text-center mb-2">
+        <button type="submit">导出为Excel</button>
+      </div>
+      <div class="container">
+        <h3 class="text-center text-orange">空气监测</h3>
+        <table border="1" cellspacing="0" class="fill-width">
+          <tr class="bg-green">
+            <th width="230">时间</th>
+            <th>温度</th>
+            <th>湿度</th>
+            <th>PM2.5</th>
+          </tr>
+          <tr v-for="(item, index) in itemList" class="text-center" :class="{'bg-orange-light': (index+1)%2===0}">
+            <td>{{item.time}}</td>
+            <td>{{item.temp}}</td>
+            <td>{{item.humi}}</td>
+            <td>{{item.pm25}}</td>
+          </tr>
+        </table>
+      </div>
+    </form>
+  </div>
+
+  <!-- 业务js -->
+  <script type="text/javascript" src="js/excel.js"></script>
+</body>
+</html>

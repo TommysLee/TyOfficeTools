@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>首页 - Office工具</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/lib/vue.global.prod.js"></script>
+  <script type="text/javascript" src="js/base.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h2 class="text-center">办公文件（Word、Excel、PDF）导出工具</h2>
+    <ul>
+      <li>
+        <h3>Word导出示例</h3>
+      </li>
+    </ul>
+    <table>
+      <tr>
+        <td>
+          <a class="hover" target="_blank" href="word_simple.html">
+            <h4 class="text-center text-orange">Word入门示例</h4>
+            <p>
+              <img src="images/example-simple.png" class="fill-width"/>
+            </p>
+          </a>
+        </td>
+        <td>
+          <a class="hover" target="_blank" href="word_table.html">
+            <h4 class="text-center text-orange">Word表格高级用法</h4>
+            <p>
+              <img src="images/example-table.png" class="fill-width"/>
+            </p>
+          </a>
+        </td>
+        <td>
+          <a class="hover" target="_blank" href="word_column.html">
+            <h4 class="text-center text-orange">Word双栏</h4>
+            <p>
+              <img src="images/example-column.png" class="fill-width"/>
+            </p>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <a class="hover" target="_blank" href="word_chart.html">
+            <h4 class="text-center text-orange">Word Chart图表</h4>
+            <p>
+              <img src="images/example-chart.png" class="fill-width"/>
+            </p>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <ul>
+      <li>
+        <h3>Excel导出示例</h3>
+      </li>
+    </ul>
+    <a class="hover text-center" target="_blank" href="excel.html">
+      <h4 class="text-orange">Excel报表</h4>
+      <p>
+        <img src="images/example-excel.png" style="height: 450px"/>
+      </p>
+    </a>
+
+    <ul>
+      <li>
+        <h3>PDF导出示例</h3>
+      </li>
+    </ul>
+    <a class="hover" target="_blank" href="pdf.html">
+      <h4 class="text-center text-orange">Word 转 PDF</h4>
+      <p>
+        <img src="images/example-chart.png" class="fill-width"/>
+      </p>
+    </a>
+  </div>
+
+  <!-- 业务js -->
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

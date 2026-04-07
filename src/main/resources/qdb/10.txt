@@ -1,0 +1,1 @@
+<p>计算:</p><p>(1)<span class="ql-formula">$4^\frac{1}{2} + 16^\frac{3}{4} - \sqrt{(3-\pi)^2} + (\frac{125}{8})^\frac{1}{3} + (2\sqrt{2})^\frac{2}{3}  $</span> </p><p>(2)<span class="ql-formula">$lg5 · lg20 + (lg2)^2 + log_29 · log_38 + 10^{lg3}$</span> </p>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word转PDF - Office工具</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/lib/vue.global.prod.js"></script>
+  <script type="text/javascript" src="js/base.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h3 class="text-center">
+      Word Chart转PDF
+    </h3>
+    <form method="post" action="/gen/pdf/word">
+      <div class="text-center mb-2">
+        <button type="submit">导出为PDF</button>
+      </div>
+      <div class="container">
+        <h3 class="text-center">Chart图表</h3>
+        <h4 class="text-center">引用标签</h4>
+        <p>
+          引用标签是一种特殊位置的特殊标签，提供了直接引用文档中的元素句柄的能力，
+          <strong>
+            这个重要的特性在我们只想改变文档中某个元素极小一部分样式和属性的时候特别有用，
+            因为其余样式和属性都可以在模板中预置好，真正的所见即所得。
+          </strong>
+        </p>
+        <img src="images/chart.png"/>
+      </div>
+    </form>
+  </div>
+
+  <!-- 业务js -->
+  <script type="text/javascript" src="js/pdf.js"></script>
+</body>
+</html>

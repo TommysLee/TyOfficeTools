@@ -1,0 +1,25 @@
+ty:
+  saveDir: /opt/data/files/
+
+#服务器配置（仅在SpringBoot内有效，外部Tomcat等容器无效）
+server:
+  port: 80 #服务器端口
+  servlet:
+    encoding:
+      charset: UTF-8
+
+#Spring配置
+spring:
+  thymeleaf: #视图配置
+    cache: false #开发时，关闭thymeleaf缓存
+  jackson: #JSON配置
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: NON_EMPTY
+  servlet:
+    multipart: #文件上传配置
+      max-file-size: 20MB
+      max-request-size: 25MB
+  web:
+    resources:
+      static-locations: /META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/, file:${ty.saveDir}

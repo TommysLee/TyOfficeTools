@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word入门示例 - Office工具</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/lib/vue.global.prod.js"></script>
+  <script type="text/javascript" src="js/base.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h3 class="text-center">
+      Word入门示例
+    </h3>
+    <form method="post" action="/gen/word/simple">
+      <div class="text-center mb-2">
+        <input type="text" class="mr-2" v-model="data.title" name="title"/>
+        <button type="submit">导出为Word</button>
+      </div>
+      <div class="container">
+        <h3>普通文本：</h3>
+        <h3 class="text-center text-green">
+          {{data.title}}
+        </h3>
+
+        <h3>链接：</h3>
+        <a :href="data.link">{{data.linkText}}</a>
+        <input type="hidden" v-model="data.link" name="link"/>
+        <input type="hidden" v-model="data.linkText" name="linkText"/>
+
+        <h3>插入网络图片：</h3>
+        <img :src="data.pic"/>
+        <input type="hidden" v-model="data.pic" name="pic"/>
+
+        <h3>表格：</h3>
+        <table border="1" cellspacing="0" class="fill-width">
+          <tr class="text-center bg-blue">
+            <td v-for="item in data.cols">{{item}}</td>
+          </tr>
+          <tr v-for="item in data.rows">
+            <td>{{item[0]}}</td>
+            <td>{{item[1]}}</td>
+          </tr>
+        </table>
+        <input type="hidden" v-model="data.cols" name="cols"/>
+        <input type="hidden" v-model="data.rows" name="rows"/>
+
+        <h3>列表：</h3>
+        <ol>
+          <li v-for="item in data.list">{{item}}</li>
+        </ol>
+        <input type="hidden" v-model="data.list" name="list"/>
+      </div>
+    </form>
+  </div>
+
+  <!-- 业务js -->
+  <script type="text/javascript" src="js/word-simple.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>编辑器</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <script type="text/javascript" src="../js/lib/vue.global.prod.js"></script>
+  <script type="text/javascript" src="../js/lib/qs.min.js"></script>
+  <script type="text/javascript" src="../js/base.js"></script>
+
+  <!-- Fluent Editor -->
+  <link rel="stylesheet" href="../js/lib/fluent-editor/fluent-editor.min.css"/>
+  <script type="text/javascript" src="../js/lib/lodash.min.js"></script>
+  <script type="text/javascript" src="../js/lib/fluent-editor/fluent-editor.umd.js"></script>
+
+  <!-- KaTex -->
+  <link rel="stylesheet" href="../js/lib/katex/katex.min.css">
+  <script type="text/javascript" src="../js/lib/katex/katex.min.js"></script>
+
+  <!-- 页面样式 -->
+  <style>
+    body {
+      background-color: #E6E6E6;
+    }
+    #editor {
+      height: calc(100vh - 121px);
+    }
+    .mb-2 {
+      margin-bottom: 8px;
+    }
+    .v-flex {
+      display: flex;
+    }
+    .v-flex-item {
+      flex: 1;
+    }
+    .v-btn {
+      padding: 8px;
+      color: white;
+      border-width: 0;
+      min-width: 80px;
+      cursor: pointer;
+    }
+    .btn-blue {
+      background: #3F51B5;
+    }
+    .btn-red {
+      background: #C2185B;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <div class="v-flex">
+      <div class="v-flex-item">
+        <button class="v-btn btn-blue mb-2" @click="forwardListPage">返回</button>
+      </div>
+      <div class="v-flex-item" style="text-align: center">
+        <a href="https://www.latexlive.com" target="_blank">快速公式</a>
+      </div>
+      <div class="v-flex-item" style="text-align: right">
+        <button class="v-btn btn-red mb-2" @click="saveQue">保存</button>
+      </div>
+    </div>
+    <div id="editor" ref="editor"></div>
+  </div>
+
+  <!-- 业务js -->
+  <script type="text/javascript" src="../js/que/que.js"></script>
+</body>
+</html>

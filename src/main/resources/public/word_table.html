@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word表格高级用法 - Office工具</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/lib/vue.global.prod.js"></script>
+  <script type="text/javascript" src="js/base.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h3 class="text-center">
+      Word表格高级用法
+    </h3>
+    <form method="post" action="/gen/word/table">
+      <div class="text-center mb-2">
+        <input type="text" class="mr-2 w-50" v-model="title" name="title"/>
+        <button type="submit">导出为Word</button>
+      </div>
+      <div class="container">
+        <h3 class="text-center">表格高级用法</h3>
+        <u class="text-center text-green font-weight-bold mb-2 display-block">
+          {{title}}
+        </u>
+        <p>
+          <strong>
+            将【表格行循环插件】注册为新标签类型，以简化使用，语法：{ {%var} }
+          </strong>
+        </p>
+        <table border="1" cellspacing="0" class="fill-width bcolor-orange">
+          <tr class="text-center bg-orange">
+            <td v-for="item in cols">{{item}}</td>
+          </tr>
+          <tr v-for="(item, index) in rows" :class="{'bg-orange-light': index===0}">
+            <td>{{item}}</td>
+            <td>AAAA</td>
+          </tr>
+        </table>
+        <input type="hidden" v-model="rows" name="rows"/>
+      </div>
+    </form>
+  </div>
+
+  <!-- 业务js -->
+  <script type="text/javascript" src="js/word-table.js"></script>
+</body>
+</html>

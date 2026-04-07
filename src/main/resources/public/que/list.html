@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>列表</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <link rel="stylesheet" href="../js/lib/katex/katex.min.css"/>
+  <link rel="stylesheet" href="../js/lib/fluent-editor/fluent-editor.min.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script type="text/javascript" src="../js/lib/vue.global.prod.js"></script>
+  <script type="text/javascript" src="../js/lib/katex/katex.min.js"></script>
+  <script type="text/javascript" src="../js/lib/katex/auto-render.min.js"></script>
+  <script type="text/javascript" src="../js/base.js"></script>
+  <style>
+    input[type=text] {
+      width: 70%;
+      min-width: 80px;
+      height: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    ul > li {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    ul > li:hover {
+      border: 2px solid #1807ab;
+    }
+    .container {
+      min-height: 500px;
+      height: 100%;
+      margin-top: 50px;
+    }
+    .toolbar {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      background: rgba(230,230,230,0.75);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <div class="mt-2 mb-2 v-flex toolbar">
+      <div class="v-flex-item">
+        <strong>学校：</strong> <input v-model="school" type="text">
+      </div>
+      <div class="v-flex-item" style="text-align: center">
+        <button class="v-btn btn-red mr-2" @click="exportWord(1)">导出Word</button>
+        <button class="v-btn btn-red mr-2" @click="exportWord(2)">导出Word(双栏)</button>
+        <span class="text-green">{{message}}</span>
+      </div>
+      <div class="v-flex-item" style="text-align: right">
+        <button class="v-btn btn-blue" @click="forwardEditorPage">新增</button>
+      </div>
+    </div>
+    <div ref="container" class="container">
+      <ul>
+        <li v-for="(item, index) in list" class="mb-2">
+          <a :href="'editor.html?id='+item.id">
+            <strong>题目{{index + 1}}</strong>
+            <div v-html="item.html">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 业务js -->
+  <script type="text/javascript" src="../js/que/list.js"></script>
+</body>
+</html>

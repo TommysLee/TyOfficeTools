@@ -1,0 +1,1 @@
+<p>某Python程序如下：</p><p>n=4</p><p>res=0</p><p>i=0</p><p>while i &lt; n:</p><p style="white-space: pre-wrap;">  res += 2**i</p><p style="white-space: pre-wrap;">  i += 1</p><p></p><p>print(res)</p><p>程序运行后，输出的值是<u style="white-space: pre-wrap;">         </u></p>

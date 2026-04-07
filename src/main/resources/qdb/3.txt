@@ -1,0 +1,1 @@
+<p>判断题</p><p style="white-space: pre-wrap;">(1)电功率越大，表示电流做功越多。（     ）</p><p style="white-space: pre-wrap;">(2)由公式<span class="ql-formula">$P=\frac{W}{t} $</span> 可知，时间越短，功率越大。（     ）</p>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word双栏 - Office工具</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/lib/vue.global.prod.js"></script>
+  <script type="text/javascript" src="js/base.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h3 class="text-center">
+      Word双栏
+    </h3>
+    <form method="post" action="/gen/word/column">
+      <div class="text-center mb-2">
+        <input type="text" class="mr-2" v-model="title" name="title"/>
+        <button type="submit">导出为Word</button>
+      </div>
+      <div class="container">
+        <table class="fill-width">
+          <tr>
+            <td style="width: 50%">
+              <h3 class="text-center">{{title}}</h3>
+              <u class="text-center text-green font-weight-bold mb-2 display-block">
+                {{author}}
+              </u>
+              <div v-for="i in 3">
+                <p class="text-center">怒发冲冠，凭栏处、潇潇雨歇。</p>
+                <p class="text-center">抬望眼，仰天长啸，壮怀激烈。</p>
+                <p class="text-center">三十功名尘与土，八千里路云和月。</p>
+                <p class="text-center">莫等闲、白了少年头，空悲切。</p>
+                <p class="text-center">靖康耻，犹未雪。</p>
+                <p class="text-center">臣子恨，何时灭。</p>
+                <p class="text-center">驾长车，踏破贺兰山缺。</p>
+                <p class="text-center">壮志饥餐胡虏肉，笑谈渴饮匈奴血。</p>
+                <p class="text-center">待从头、收拾旧山河，朝天阙。</p>
+                <p>&nbsp;</p>
+              </div>
+            </td>
+            <td style="width: 50%; border-left: 1px solid #000">
+              <div v-for="i in 3">
+                <p class="text-center">怒发冲冠，凭栏处、潇潇雨歇。</p>
+                <p class="text-center">抬望眼，仰天长啸，壮怀激烈。</p>
+                <p class="text-center">三十功名尘与土，八千里路云和月。</p>
+                <p class="text-center">莫等闲、白了少年头，空悲切。</p>
+                <p class="text-center">靖康耻，犹未雪。</p>
+                <p class="text-center">臣子恨，何时灭。</p>
+                <p class="text-center">驾长车，踏破贺兰山缺。</p>
+                <p class="text-center">壮志饥餐胡虏肉，笑谈渴饮匈奴血。</p>
+                <p class="text-center">待从头、收拾旧山河，朝天阙。</p>
+                <p>&nbsp;</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </form>
+  </div>
+
+  <!-- 业务js -->
+  <script type="text/javascript" src="js/word-column.js"></script>
+</body>
+</html>
