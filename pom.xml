@@ -14,7 +14,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.2</version>
+        <version>3.5.12</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -204,16 +204,8 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>33.2.1-jre</version>
+            <version>33.5.0-jre</version>
             <exclusions>
-                <exclusion>
-                    <groupId>com.google.code.findbugs</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.google.errorprone</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
                     <artifactId>listenablefuture</artifactId>
@@ -223,7 +215,7 @@
                     <artifactId>*</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.checkerframework</groupId>
+                    <groupId>org.jspecify</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
